@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+/* Header */
+
+.stygian{
+    font-family: 'Playfair Display', serif;
+    color:  #191970;
+    font-size: 30px;
+}
+
+/* Background */
+
+body{
+    background-color: #FAF9F6;
+    padding: 10px;
+}
+
+/* Toggle Button */
+
+.button{
+    background-color: #CCCCFF;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 0.9rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width: 4.5rem;
+    border-radius: 1rem;
+    animation: backgroundYellow 1s infinite;
+    cursor: pointer;
+}
+
+.row{
+   padding: 0 0.25rem; 
+   pointer-events: none;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #6495ED;
+    animation: moveCircleRight 1s infinite;
+    pointer-events: none;
+}
+
+/* Animation */
+
+@keyframes moveCircleRight {
+    from {
+        left: 0;
+        background-color: #6495ED;
+    }
+    to{
+        left: 100%;
+        transform: translateX(-100%);
+        background-color: #FBEC5D;
+    }
+}
+
+@keyframes moveCircleLeft{
+    from{
+        left: 100%;
+        transform: translateX(-100%);
+        background-color: #FBEC5D;
+    }
+    to{
+        left: 0;
+        background-color: #6495ED;
+    }
+}
+
+@keyframes backgroundYellow{
+    from{
+        background-color: #CCCCFF;
+    }
+    to{
+        background-color: #FFFF8F;
+    }
+}
+
+@keyframes backgroundBlue{
+    from{
+        background-color: #FFFF8F;
+    }
+    to{
+        background-color: #CCCCFF;
+    }
+}
